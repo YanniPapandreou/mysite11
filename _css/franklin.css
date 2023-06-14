@@ -1,3 +1,23 @@
+/* table rules */
+
+th {
+  background-color: navy;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(odd){
+  background-color: lightgray;
+}
+
+
+/* custom css */
+.source {
+  font-size: var(--small);
+  font-style: italic;
+}
+
+
 /* ==================================================================
     VARIABLES
 ================================================================== */
@@ -268,13 +288,15 @@ body { counter-reset: eqnum; }
   white-space: normal;
 }
 
-.katex-display::after {
-  counter-increment: eqnum;
-  content: "(" counter(eqnum) ")";
-  position: relative;
-  float: right;
-  padding-right: 5px;
-}
+/* comment this to disable numbering of equations */
+
+/* .katex-display::after { */
+/*   counter-increment: eqnum; */
+/*   content: "(" counter(eqnum) ")"; */
+/*   position: relative; */
+/*   float: right; */
+/*   padding-right: 5px; */
+/* } */
 
 .nonumber .katex-display::after {
   counter-increment: nothing;
